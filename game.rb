@@ -33,6 +33,15 @@ class Game
 
   end
 
-   # make the game run until game over
+  def play
+    
+    until @player1.life == 0 || @player2.life == 0 do
+      ask_question
+      score
+    end
+    
+  end
+
+  
 
 end
