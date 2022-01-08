@@ -42,6 +42,9 @@ class Game
     
   end
 
+  puts "---- GAME OVER ---- "
+
+  puts @player == @player1 ? "Player 2 wins with a score of #{@player2.life}/3" : "Player 1 wins with a score of #{@player1.life}/3"
   
 
 end
