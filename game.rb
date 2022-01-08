@@ -3,6 +3,8 @@ class Game
   def initialize
     @player1 = Player.new
     @player2 = Player.new
+    @player = @player1
+    @turn = true
   end
 
   def score
@@ -11,10 +13,12 @@ class Game
   end
 
   def ask_question
+
+    @turn ? @player = @player1 : @player = @player2
   
     question = Question.new
 
-    "Player 1: #{question.question_generator}" : "Player 2: #{question.question_generator}"
+    puts @player == @player1 ? "Player 1: #{question.question_generator}" : "Player 2: #{question.question_generator}"
   
     user_answer = gets.chomp.to_i
 
@@ -24,6 +28,8 @@ class Game
       puts "Nope"
       @player.adjust_score
     end
+
+    @turn ? @turn = false : @turn = true
 
   end
 
