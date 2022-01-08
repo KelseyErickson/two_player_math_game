@@ -12,7 +12,6 @@ class Game
     puts "----- NEW TURN -----"
   end
 
-
   def ask_question
     @turn ? @player = @player1 : @player = @player2
     question = Question.new
@@ -29,7 +28,6 @@ class Game
     end
 
     @turn ? @turn = false : @turn = true
-
   end
 
   def play
@@ -42,5 +40,4 @@ class Game
   
     puts @player == @player1 ? "Player 2 wins with a score of #{@player2.life}/3" : "Player 1 wins with a score of #{@player1.life}/3"
   end
-
 end

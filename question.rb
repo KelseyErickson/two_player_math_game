@@ -1,7 +1,7 @@
 class Question
 
   def initialize
-    @operators = [:+, :-, :*] # not adding division - too difficult for people to do in their head
+    @operators = [:+, :-, :*] # not adding division - too difficult
     @number1 = rand(1..20)
     @number2 = rand(1..20)
     @operator = @operators.sample
@@ -14,5 +14,4 @@ class Question
   def answer
     @number1.send(@operator, @number2) #nvokes the method identified by symbol - https://apidock.com/ruby/Object/send
   end
-
 end
