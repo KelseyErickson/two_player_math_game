@@ -33,7 +33,8 @@ class Game
   def play
     
     until @player1.life == 0 || @player2.life == 0 do
-      ask_question and score
+      ask_question
+      score
     end
     
     puts "---- GAME OVER ---- "
